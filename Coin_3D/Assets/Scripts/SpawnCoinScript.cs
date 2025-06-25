@@ -19,13 +19,23 @@ public class SpawnCoinScript : MonoBehaviour
       */
     }
 
-    private void OnTriggerEnter(Collider other)
+    /* private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
-            Vector3 randomPosition = new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
+            Vector3 randomPosition = new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5));
             Instantiate(coinPrefab, randomPosition, Quaternion.identity);
         }
     }
-    
+    */
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.name == "Player")
+        {
+            Destroy(gameObject);
+            Vector3 randomPosition = new Vector3(Random.Range(-3, 3), 0, Random.Range(-3, 3));
+            Instantiate(coinPrefab, randomPosition, Quaternion.identity);
+            
+        }
+    }
 }
