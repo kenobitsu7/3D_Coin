@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementScript : MonoBehaviour
+public class PlayerMovementScript : MonoBehaviour
 {
 
     public float speed;
@@ -57,6 +57,14 @@ public class MovementScript : MonoBehaviour
         {
             Quaternion toRotate = Quaternion.LookRotation(moveDirection, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, rotationSpeed * Time.deltaTime);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.name == "Coin" )
+        {
+            Score.scoreCount += 1;
         }
     }
 }

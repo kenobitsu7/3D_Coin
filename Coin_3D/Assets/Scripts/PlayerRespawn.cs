@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameRespawn : MonoBehaviour
+public class PlayerRespawn : MonoBehaviour
 {
 
     public float thresold; //threshold est definie sur Y-value de Transform
@@ -23,6 +23,7 @@ public class GameRespawn : MonoBehaviour
         if (transform.position.y < thresold)
         {
             transform.position = new Vector3(0.01f, 0.951f, 0.04f);
+
             GameManager.health -= 1;
         }
     }

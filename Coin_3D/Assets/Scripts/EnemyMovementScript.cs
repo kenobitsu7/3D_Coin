@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowScript : MonoBehaviour
+public class EnemyMovementScript : MonoBehaviour
 {
 
     public Transform targetObj;

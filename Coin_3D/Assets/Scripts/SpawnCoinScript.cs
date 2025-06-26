@@ -11,15 +11,11 @@ public class SpawnCoinScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      /* if (Input.GetKeyDown(KeyCode.Space))
-         {
-            Vector3 randomPosition = new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
-            Instantiate(coinPrefab, randomPosition, Quaternion.identity);
-         }
-      */
+       gameObject.transform.Rotate(0f, 1f, 0f, Space.Self);
     }
 
     /* private void OnTriggerEnter(Collider other)
+     
     {
         if (other.gameObject.tag == "Player")
         {
@@ -27,15 +23,18 @@ public class SpawnCoinScript : MonoBehaviour
             Instantiate(coinPrefab, randomPosition, Quaternion.identity);
         }
     }
+
     */
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == "Player")
         {
             Destroy(gameObject);
-            Vector3 randomPosition = new Vector3(Random.Range(-3, 3), 0, Random.Range(-3, 3));
+            Vector3 randomPosition = new Vector3(Random.Range(-4, 4), 0, Random.Range(-4, 4));
             Instantiate(coinPrefab, randomPosition, Quaternion.identity);
-            
+
+            Score.scoreCount += 1;
         }
     }
 }
