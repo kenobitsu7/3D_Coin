@@ -30,11 +30,13 @@ public class SpawnCoinScript : MonoBehaviour
     {
         if (other.name == "Player")
         {
-            Destroy(gameObject);
-            Vector3 randomPosition = new Vector3(Random.Range(-4, 4), 0, Random.Range(-4, 4));
+            
+            Vector3 randomPosition = new Vector3(Random.Range(-4, 4), 0.5f, Random.Range(-4, 4));
             Instantiate(coinPrefab, randomPosition, Quaternion.identity);
 
             Score.scoreCount += 1;
+
+            Destroy(gameObject);
         }
     }
 }

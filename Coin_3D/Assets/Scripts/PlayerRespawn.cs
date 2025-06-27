@@ -1,30 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerRespawn : MonoBehaviour
 {
 
-    public float thresold; //threshold est definie sur Y-value de Transform
-    
+    [SerializeField] private HealthManager healthManager;
+    [SerializeField] private CharacterController characterController;
 
-    // Update run on a fixed time
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("DeathCollider"))
+        {
 
-    /* void FixedUpdate()
-    {
-        if(transform.position.y < thresold)
-        {
-            transform.position = new Vector3(0.01f, 0.951f, 0.04f);
-        }
-    }
-    */
-    void Update()
-    {
-        if (transform.position.y < thresold)
-        {
+            characterController.enabled = false;
+
+            healthManager.ManageHealth(-1);
+
             transform.position = new Vector3(0.01f, 0.951f, 0.04f);
 
-            GameManager.health -= 1;
+            characterController.enabled = true;
+
         }
-    }
+    }   
 }

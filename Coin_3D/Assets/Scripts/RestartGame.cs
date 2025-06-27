@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class RestartGame : MonoBehaviour
 {
+    [SerializeField] private HealthManager healthManager;
     public void RestartLevel()
     {
         Time.timeScale = 1;
-        GameManager.health = 4;
+        healthManager.ManageHealth(3);
         SceneManager.LoadScene(0);
 
         Score.scoreCount = 0;
