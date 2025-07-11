@@ -5,31 +5,17 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
 
-    [SerializeField] private HealthManager healthManager;
-    public int Playerhealth = 3;
-    int damage = 1;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        print(Playerhealth);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    [SerializeField] private HealthManager healthManager;   
+    [SerializeField] private int damage = 1;
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.CompareTag ("Player"))
         {
-
-            Playerhealth -= damage;
-            print ("damage" + Playerhealth);
-
-            healthManager.ManageHealth(-1);
+ 
+            healthManager.ManageHealth(-damage);
+            Vector3 dir = (collision.transform.position - transform.position).normalized;
+            collision.gameObject.GetComponent<PlayerKnockback>()?.ApplyKnockback(dir);
 
         }
     }
