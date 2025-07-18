@@ -119,10 +119,10 @@ GameObject:
   - component: {fileID: 3295427075700235615}
   - component: {fileID: 3741991258847764370}
   - component: {fileID: 2908421489961833054}
-  - component: {fileID: 4948422861780079383}
   - component: {fileID: 3751338046769779118}
   - component: {fileID: 6356387352961636068}
   - component: {fileID: 8872312834486953192}
+  - component: {fileID: 1000551667712364542}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -267,20 +267,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &4948422861780079383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7186004671158933274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b9a8788855f6aa40afd844c458d54b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 2908421489961833054}
-  player: {fileID: 0}
 --- !u!114 &3751338046769779118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,6 +314,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthManager: {fileID: 0}
   damage: 1
+--- !u!114 &1000551667712364542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7186004671158933274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e602db025769504fb3c63009410c7b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  arrivalThreshold: 1
+  chaseRange: 6
+  player: {fileID: 0}
 --- !u!1001 &4319293725493674849
 PrefabInstance:
   m_ObjectHideFlags: 0
