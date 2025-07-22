@@ -6,6 +6,6 @@ public class EnemyController : MonoBehaviour
 {
     public void Kill()
     {
-        Destroy(gameObject);
+        Destroy(gameObject);       
     }
 }
