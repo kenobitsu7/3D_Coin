@@ -42,11 +42,11 @@ public class HealthManager : MonoBehaviour
                     heart2.gameObject.SetActive(false);
                     heart3.gameObject.SetActive(false);
                     break;
-                case 0:       
+                case 0:                   
                     heart1.gameObject.SetActive(false);
                     heart2.gameObject.SetActive(false);
-                    heart3.gameObject.SetActive(false);
-                    GameOver.gameObject.SetActive(true);
+                    heart3.gameObject.SetActive(false);        
+                    GameOver.gameObject.SetActive(true);                    
                     Time.timeScale = 0;
                     break;           
             }

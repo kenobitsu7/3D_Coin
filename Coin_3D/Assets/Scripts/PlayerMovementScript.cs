@@ -29,9 +29,7 @@ public class PlayerMovementScript : MonoBehaviour
     void Update()
     {
         Movement();
-
     }
-
     private void Movement()
     {
         float horizontalMove = Input.GetAxis("Horizontal");
@@ -78,7 +76,6 @@ public class PlayerMovementScript : MonoBehaviour
             }
 
             animator.SetBool("isGrounded",isGrounded);
-
         }
 
         if (moveDirection != Vector3.zero)

@@ -7,11 +7,9 @@ public class EnemyKill : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
-        {
-          
+        {         
             var enemy = other.gameObject.GetComponent<EnemyController>();         
-            enemy.Kill();
-            
+            enemy.Kill();           
         }
     }
 }

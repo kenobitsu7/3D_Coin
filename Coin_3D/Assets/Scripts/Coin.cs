@@ -6,6 +6,14 @@ public class Coin : MonoBehaviour
 {
     public int value;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -17,6 +25,8 @@ public class Coin : MonoBehaviour
     {
         if (other.name == "Player")
         {
+            audioManager.PlaySFX(audioManager.coin);
+
             Score.scoreCount += value;
 
             Destroy(gameObject);

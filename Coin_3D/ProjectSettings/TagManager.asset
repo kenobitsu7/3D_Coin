@@ -8,6 +8,7 @@ TagManager:
   - DeathCollider
   - Enemy
   - Platform
+  - Audio
   layers:
   - Default
   - TransparentFX

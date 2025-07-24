@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class RestartGame : MonoBehaviour
 {
     [SerializeField] private HealthManager healthManager;
+
     public void RestartLevel()
     {
         Time.timeScale = 1;
