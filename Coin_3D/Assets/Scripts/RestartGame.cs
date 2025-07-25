@@ -14,5 +14,6 @@ public class RestartGame : MonoBehaviour
         SceneManager.LoadScene(0);
 
         GameManager.Instance.Score = 0;
+        GameManager.Instance.KillCount = 0;
     }
 }

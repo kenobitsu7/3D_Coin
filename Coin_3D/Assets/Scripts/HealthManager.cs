@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-
+    
     public GameObject GameOver, heart1, heart2, heart3;
     private int health;
 
@@ -45,7 +45,7 @@ public class HealthManager : MonoBehaviour
                 case 0:                   
                     heart1.gameObject.SetActive(false);
                     heart2.gameObject.SetActive(false);
-                    heart3.gameObject.SetActive(false);        
+                    heart3.gameObject.SetActive(false);                    
                     GameOver.gameObject.SetActive(true);                    
                     Time.timeScale = 0;
                     break;           

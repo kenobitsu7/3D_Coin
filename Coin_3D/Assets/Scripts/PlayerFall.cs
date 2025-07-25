@@ -37,7 +37,7 @@ public class PlayerFall : MonoBehaviour
             heart2.gameObject.SetActive(false);
             heart3.gameObject.SetActive(false);
 
-            Player.gameObject.SetActive(false);
+            Player.gameObject.SetActive(false);           
 
             GameOver.gameObject.SetActive(true);
             Time.timeScale = 0;
