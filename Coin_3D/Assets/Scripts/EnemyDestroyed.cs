@@ -4,20 +4,13 @@ using UnityEngine;
 using TMPro;
 public class EnemyDestroyed : MonoBehaviour
 {
-    public TextMeshProUGUI enemydestroyedText;
-   
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
+    public TextMeshProUGUI enemyDestroyedText;
+       
     // Update is called once per frame
     void Update()
     {
-        
+        enemyDestroyedText.text = "Enemy Destroyed: " + GameManager.Instance.KillCount.ToString();
     }
-
 
 }
 

@@ -9,20 +9,24 @@ public class CountdownTimer : MonoBehaviour
     public float timeValue = 90;
 
     public GameObject GameOver;
-
+        
     // Update is called once per frame
     void Update()
     {
-        if (timeValue > 0)
+        if (!GameManager.Instance.TimerIsStop)
         {
-            timeValue -= Time.deltaTime;
-        }
-        else
-        {
-            timeValue = 0;
-        }
+            if (timeValue > 0)
+            {
+                timeValue -= Time.deltaTime;
+            }
+            else
+            {
+                timeValue = 0;
+            }
 
-        DisplayTime(timeValue);
+            DisplayTime(timeValue);
+        }
+        
     }
     void DisplayTime(float timeToDisplay)
     { 

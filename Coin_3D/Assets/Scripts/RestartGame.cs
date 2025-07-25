@@ -13,6 +13,6 @@ public class RestartGame : MonoBehaviour
         healthManager.ManageHealth(3);
         SceneManager.LoadScene(0);
 
-        Score.scoreCount = 0;
+        GameManager.Instance.Score = 0;
     }
 }

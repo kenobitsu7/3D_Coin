@@ -8,7 +8,8 @@ public class EnemyKill : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {         
-            var enemy = other.gameObject.GetComponent<EnemyController>();         
+            var enemy = other.gameObject.GetComponent<EnemyController>();
+            GameManager.Instance.KillCount++;
             enemy.Kill();           
         }
     }

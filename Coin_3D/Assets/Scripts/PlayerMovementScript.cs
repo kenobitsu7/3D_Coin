@@ -84,11 +84,5 @@ public class PlayerMovementScript : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, rotationSpeed * Time.deltaTime);
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.name == "Coin" )
-        {
-            Score.scoreCount += 1;
-        }
-    }
+    
 }

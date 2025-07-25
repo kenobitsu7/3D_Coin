@@ -27,7 +27,7 @@ public class Coin : MonoBehaviour
         {
             audioManager.PlaySFX(audioManager.coin);
 
-            Score.scoreCount += value;
+            GameManager.Instance.Score += value;
 
             Destroy(gameObject);
         }
