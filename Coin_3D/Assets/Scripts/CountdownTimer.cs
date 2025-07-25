@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class Timer : MonoBehaviour
+public class CountdownTimer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
     public float timeValue = 90;
