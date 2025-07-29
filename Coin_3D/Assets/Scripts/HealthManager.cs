@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-    
-    public GameObject GameOver, heart1, heart2, heart3;
+    [SerializeField] private AudioManager audioManager;
     private int health;
+    public int Health {  get { return health; } set { health = value; } }
+    public GameObject GameOver, heart1, heart2, heart3;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +49,7 @@ public class HealthManager : MonoBehaviour
                     heart3.gameObject.SetActive(false);                    
                     GameOver.gameObject.SetActive(true);                    
                     Time.timeScale = 0;
+                    audioManager.StopMusic();
                     break;           
             }
     }

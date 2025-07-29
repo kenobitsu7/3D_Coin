@@ -2892,7 +2892,7 @@ GameObject:
   - component: {fileID: 1385059914}
   - component: {fileID: 1385059913}
   m_Layer: 0
-  m_Name: Audio Manager
+  m_Name: AudioManager
   m_TagString: Audio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3528,6 +3528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9639d88e0bd688c4d95c5be8ce84f674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 1385059913}
   GameOver: {fileID: 1358029768}
   heart1: {fileID: 987328415}
   heart2: {fileID: 2108884589}
@@ -5131,11 +5132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e56dbe41a97c544fae47a25e413d142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthManager: {fileID: 1895812667}
   Player: {fileID: 8854812458247611305}
-  GameOver: {fileID: 1358029768}
-  heart1: {fileID: 987328415}
-  heart2: {fileID: 2108884589}
-  heart3: {fileID: 2090738664}
 --- !u!114 &4909756259890966086
 MonoBehaviour:
   m_ObjectHideFlags: 3
