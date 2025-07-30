@@ -4,29 +4,19 @@ using UnityEngine;
 
 public class PlayerKnockback : MonoBehaviour
 {
-    [SerializeField] private CharacterController controller;
-    private bool isKnockback;
-
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private float strength = 10f;
+    [SerializeField] private float cooldown = 0.2f;
+    private float lastKnockbackTime = -Mathf.Infinity;
     public void ApplyKnockback (Vector3 direction)
     {
-        if (!isKnockback)
+        if(Time.time - lastKnockbackTime < cooldown)
         {
-            StartCoroutine(KnockBackRoutine(direction, 0.2f, 10f));
-        }
-    }
-
-    IEnumerator KnockBackRoutine(Vector3 direction, float duration, float strength)
-    {
-        isKnockback = true;
-        float timer = 0f;
-
-        while (timer < duration)
-        {
-            controller.Move (direction * strength * Time.deltaTime);
-            timer += Time.deltaTime;
-            yield return null;
+            return;
         }
 
-        isKnockback=false;
-    }
+        direction.y = 0f;
+        rb.AddForce(direction.normalized*strength,ForceMode.Impulse);
+        lastKnockbackTime = Time.time;
+    }       
 }

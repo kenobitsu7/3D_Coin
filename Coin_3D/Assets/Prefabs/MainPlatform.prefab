@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 5336271111328155870}
   - component: {fileID: 6601641656036737226}
   - component: {fileID: 5312686934012852047}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Platform
   m_Icon: {fileID: 0}

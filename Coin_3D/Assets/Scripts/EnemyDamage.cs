@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
@@ -8,6 +9,7 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField] private HealthManager healthManager;   
     [SerializeField] private int damage = 1;
 
+    
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag ("Player"))
@@ -17,6 +19,7 @@ public class EnemyDamage : MonoBehaviour
             Vector3 dir = (collision.transform.position - transform.position).normalized;
             collision.gameObject.GetComponent<PlayerKnockback>()?.ApplyKnockback(dir);
 
+            
         }
     }
 }
