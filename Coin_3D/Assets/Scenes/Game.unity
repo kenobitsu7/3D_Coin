@@ -4486,16 +4486,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 7083373557130070092}
-    - target: {fileID: 3365552596498796846, guid: c47d8733cbea851449b50589f8869ecb,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 3365552596498796846, guid: c47d8733cbea851449b50589f8869ecb,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 0.34
-      objectReference: {fileID: 0}
     - target: {fileID: 5785523659662685151, guid: c47d8733cbea851449b50589f8869ecb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5203,26 +5193,6 @@ PrefabInstance:
       propertyPath: waypoints
       value: 
       objectReference: {fileID: 93775326}
-    - target: {fileID: 6356387352961636068, guid: 157be22808331b547a7f802a55a15f2e,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 6356387352961636068, guid: 157be22808331b547a7f802a55a15f2e,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 0.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 6356387352961636068, guid: 157be22808331b547a7f802a55a15f2e,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6356387352961636068, guid: 157be22808331b547a7f802a55a15f2e,
-        type: 3}
-      propertyPath: m_Center.z
-      value: -0
-      objectReference: {fileID: 0}
     - target: {fileID: 7186004671158933274, guid: 157be22808331b547a7f802a55a15f2e,
         type: 3}
       propertyPath: m_Name
