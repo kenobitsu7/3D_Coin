@@ -28,6 +28,7 @@ public class PlayerMovementScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
         camTransform = Camera.main.transform;
         
         animator = GetComponentInChildren<Animator>(); 
@@ -42,7 +43,7 @@ public class PlayerMovementScript : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {
+    {        
         Vector3 move = moveDirection * magnitude * speed;
         rb.velocity = new Vector3(move.x, rb.velocity.y, move.z);
     }
@@ -69,7 +70,10 @@ public class PlayerMovementScript : MonoBehaviour
         if (moveDirection != Vector3.zero)
         {
             Quaternion toRotate = Quaternion.LookRotation(moveDirection, Vector3.up);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, rotationSpeed * Time.deltaTime);
+
+            //transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, rotationSpeed * Time.deltaTime);
+
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, rotationSpeed * Time.fixedDeltaTime);
         }
     }
 

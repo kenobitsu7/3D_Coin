@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using TMPro;
 public class CountdownTimer : MonoBehaviour
 {
+    [SerializeField] private AudioManager audioManager;
+
     public TextMeshProUGUI timerText;
     public float timeValue = 90;
 
@@ -37,6 +39,7 @@ public class CountdownTimer : MonoBehaviour
             GameOver.gameObject.SetActive(true);
             Time.timeScale = 0;
 
+            audioManager.StopMusic();
         }
         else if (timeToDisplay > 0)
         {
