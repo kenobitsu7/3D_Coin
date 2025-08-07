@@ -1,0 +1,12 @@
+- - - - - - - - Settings (by default) - - - - - - - - 
+
+
+- z : Forward
+
+- s : Back
+
+- q : Turn Left
+
+- d : Turn Right
+
+- space bar : Jump
