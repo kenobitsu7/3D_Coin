@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FlickeringLight : MonoBehaviour
 {
-    [SerializeField] private Light light;
+    [SerializeField] private Light _light;
     [SerializeField] private float waitingTime;
     [SerializeField] private float defaultIntensity;
     [SerializeField] private float targetIntensity;
@@ -18,13 +18,13 @@ public class FlickeringLight : MonoBehaviour
     {
         while (true)
         {
-            if (light.intensity == defaultIntensity)
+            if (_light.intensity == defaultIntensity)
             {
-                light.intensity = targetIntensity;
+                _light.intensity = targetIntensity;
             }
-            else if (light.intensity == targetIntensity)
+            else if (_light.intensity == targetIntensity)
             {
-                light.intensity = defaultIntensity;
+                _light.intensity = defaultIntensity;
             }
             yield return new WaitForSeconds(waitingTime);
         }
