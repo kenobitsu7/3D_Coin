@@ -1,0 +1,12 @@
+------------- Game Rules ----------------
+
+
+
+---> The goal of the game is to collect as many coins as possible and find the exit before time runs out. 
+
+
+
+- The player can kill enemies by jumping on their heads. 
+
+
+- The player can complete the level by jumping onto one of the four moving ascending/descending platforms present in the game.
